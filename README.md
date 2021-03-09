@@ -1,6 +1,6 @@
 # Python projects spring 2021
 
-#Python projects built during my Introduction to Computing course (COMP150) during spring 2021.
+Python projects built during my Introduction to Computing course (COMP150) during spring 2021.
 
 <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 
