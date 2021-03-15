@@ -1,0 +1,111 @@
+#Daniel Greenwald
+#Week 6 Homework
+#This program is an animation of the american flag on a flag pole as it is lowered and then taken away.
+
+#Requirements: Zelle's graphics package
+
+from graphics import *
+
+
+def main():
+    win = GraphWin('"Lowering The American Flag" By Daniel Greenwald', 1000, 1000) #Window name and dementions.
+    win.setBackground(color_rgb(0, 0, 0)) #Window background color.
+
+    rect1 = Rectangle(Point(200,300),Point(348,398)) #Flag's blue coner
+    rect2 = Rectangle(Point(348,300),Point(600,314)) #Flag stripe
+    rect3 = Rectangle(Point(348,314),Point(600,328))#Flag stripe
+    rect4 = Rectangle(Point(348,328),Point(600,342))#Flag stripe
+    rect5 = Rectangle(Point(348,342),Point(600,356))#Flag stripe
+    rect6 = Rectangle(Point(348, 356), Point(600, 370))#Flag stripe
+    rect7 = Rectangle(Point(348, 370), Point(600, 384))#Flag stripe
+    rect8 = Rectangle(Point(348, 384), Point(600, 398))#Flag stripe
+    rect9 = Rectangle(Point(200,398),Point(600,412))#Flag stripe
+    rect10 = Rectangle(Point(200,412), Point(600,426))#Flag stripe
+    rect11 = Rectangle(Point(200,426), Point(600, 440))#Flag stripe
+    rect12 = Rectangle(Point(200,440), Point(600,454))#Flag stripe
+    rect13 = Rectangle(Point(200, 454), Point(600,468))#Flag stripe
+    rect14 = Rectangle(Point(200, 468), Point(600,482))#Flag stripe
+    rect15 = Rectangle(Point(184, 300), Point(200,800))#Flag pole
+    cir = Circle(Point(192,293), 8) #Flag pole final top
+    txt = Text(Point(500,200), '"Lowering The American Flag" By Daniel Greenwald') #Graphic Text
+
+    rect1.setFill(color_rgb(0,0,128)) #Blue corner coloring
+    rect2.setFill(color_rgb(191,10,48))
+    rect3.setFill(color_rgb(255, 255, 255))
+    rect4.setFill(color_rgb(191,10,48))#red stripe coloring
+    rect5.setFill(color_rgb(255, 255, 255))
+    rect6.setFill(color_rgb(191,10,48))
+    rect7.setFill(color_rgb(255, 255, 255))
+    rect8.setFill(color_rgb(191,10,48))
+    rect9.setFill(color_rgb(255, 255, 255))#white stipe coloring
+    rect10.setFill(color_rgb(191,10,48))
+    rect11.setFill(color_rgb(255, 255, 255))
+    rect12.setFill(color_rgb(191,10,48))
+    rect13.setFill(color_rgb(255, 255, 255))
+    rect14.setFill(color_rgb(191,10,48))
+    rect15.setFill(color_rgb(105, 105, 105))
+    cir.setFill(color_rgb(105, 105, 105))
+    txt.setTextColor(color_rgb(255,255,255)) #Graphic text color
+    txt.setSize(30) #Graphic text size
+    txt.setFace('helvetica') #Graphic text font
+
+
+    #draws the graphics
+    rect1.draw(win)
+    rect2.draw(win)
+    rect3.draw(win)
+    rect4.draw(win)
+    rect5.draw(win)
+    rect6.draw(win)
+    rect7.draw(win)
+    rect8.draw(win)
+    rect9.draw(win)
+    rect10.draw(win)
+    rect11.draw(win)
+    rect12.draw(win)
+    rect13.draw(win)
+    rect14.draw(win)
+    rect15.draw(win)
+    cir.draw(win)
+    txt.draw(win)
+
+    for i in range (52): #loop for lowering the flag down the flagpole
+        rect1.move(0,5)
+        rect2.move(0,5)
+        rect3.move(0,5)
+        rect4.move(0,5)
+        rect5.move(0,5)
+        rect6.move(0,5)
+        rect7.move(0,5)
+        rect8.move(0,5)
+        rect9.move(0,5)
+        rect10.move(0,5)
+        rect11.move(0,5)
+        rect12.move(0,5)
+        rect13.move(0,5)
+        rect14.move(0,5)
+        time.sleep(0.5)
+
+    for i in range (155): #loop for taking the flage away
+        rect1.move(5,0)
+        rect2.move(5,0)
+        rect3.move(5,0)
+        rect4.move(5,0)
+        rect5.move(5,0)
+        rect6.move(5,0)
+        rect7.move(5,0)
+        rect8.move(5,0)
+        rect9.move(5,0)
+        rect10.move(5,0)
+        rect11.move(5,0)
+        rect12.move(5,0)
+        rect13.move(5,0)
+        rect14.move(5,0)
+        time.sleep(0.5)
+
+
+
+    win.promptClose  #closes the window once the animation is complete.
+
+main()
+
